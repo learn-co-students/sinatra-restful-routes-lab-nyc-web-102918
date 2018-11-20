@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recipes</title>
+    <style media="screen">
+      .recipe {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Recipes</h1>
+    <% @recipes.each do |recipe| %>
+      <div class="recipe">
+        <a href="/recipes/<%=recipe.id %>"><h2><%= recipe.name %></h2></a>
+        <p><%= recipe.ingredients %></p>
+        <p><%= recipe.cook_time %></p>
+      </div>
+    <% end %>
+  </body>
+</html>
